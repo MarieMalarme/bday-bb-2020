@@ -57,7 +57,7 @@ const init = () => {
       c.rotation.y += 0.02
       c.rotation.z += 0.02
       filter.style.background = `hsl(${count}, 50%, 50%)`
-      count += 0.1
+      count += 0.05
     })
 
     requestAnimationFrame(render)
