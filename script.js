@@ -47,11 +47,17 @@ const init = () => {
 
   canvas.appendChild(renderer.domElement)
 
+  const filter = document.getElementById('filter')
+
+  let count = 0
+
   const render = () => {
     scene.children.forEach((c) => {
       c.rotation.x += 0.02
       c.rotation.y += 0.02
       c.rotation.z += 0.02
+      filter.style.background = `hsl(${count}, 50%, 50%)`
+      count += 0.1
     })
 
     requestAnimationFrame(render)
